@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+PYVERS=$(shell pyversions -sv)
+
+%:
+	dh $@ --with python2
+
+get-orig-source:
+	uscan --noconf --force-download --download-current-version --destdir=${CURDIR}
+
+test-python%:
+	python$* mimeparse_test.py
+
+ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
+override_dh_auto_test: ${PYVERS:%=test-python%}
+endif

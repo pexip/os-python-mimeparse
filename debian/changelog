@@ -1,0 +1,54 @@
+python-mimeparse (0.1.3-6) unstable; urgency=low
+
+  * Use Debhelpper 8
+  * use uscan for get-orig-source target 
+  * Initial release ready for Debian unstable (Closes: #647162)
+
+ -- Mathias Ertl <apt-repository@fsinf.at>  Fri, 04 Nov 2011 09:58:33 +0000
+
+python-mimeparse (0.1.3-5) unstable; urgency=low
+
+  * Build-Depend on python-all instead of just python
+  * check for nocheck DEB_BUILD_OPTIONS
+  * Get supported python versions in a cleaner way
+  * Initial release ready for Debian unstable (Closes: #647162)
+ 
+ -- Mathias Ertl <apt-repository@fsinf.at>  Tue, 01 Nov 2011 11:55:50 +0000
+
+python-mimeparse (0.1.3-4) unstable; urgency=low
+
+  * Build-Depend on python-all instead of just python
+  * check for nocheck DEB_BUILD_OPTIONS
+  * Get supported python versions in a cleaner way
+  * Initial release ready for Debian unstable (Closes: #647162)
+ 
+ -- Mathias Ertl <apt-repository@fsinf.at>  Tue, 01 Nov 2011 11:55:50 +0000
+
+python-mimeparse (0.1.3-4) unstable; urgency=low
+
+  * Do not repackage source tarball
+  * Add debian/watch file
+  * Run test-suite for all supported python versions
+ 
+ -- Mathias Ertl <apt-repository@fsinf.at>  Mon, 31 Oct 2011 11:22:10 +0000
+
+python-mimeparse (0.1.3-3) unstable; urgency=low
+
+  * debian/copyright is now machine readable
+  * get-orig-source target now works from every directory
+ 
+ -- Mathias Ertl <apt-repository@fsinf.at>  Mon, 31 Oct 2011 10:41:57 +0100
+
+python-mimeparse (0.1.3-2) unstable; urgency=low
+
+  * update package for newest standards.
+  * deprecate python-support and use dh_python2 instead
+  * no longer depend on quilt
+ 
+ -- Mathias Ertl <apt-repository@fsinf.at>  Sun, 30 Oct 2011 14:46:01 +0000
+
+python-mimeparse (0.1.3-1) unstable; urgency=low
+
+  * Initial version
+ 
+ -- Mathias Ertl <apt-repository@fsinf.at>  Sat, 04 Dec 2010 17:04:20 +0100
