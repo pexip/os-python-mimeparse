@@ -1,9 +1,28 @@
 #!/usr/bin/make -f
 
 PYVERS=$(shell pyversions -sv)
+PY3VERS=$(shell py3versions -sv)
 
 %:
-	dh $@ --with python2
+	dh $@ --buildsystem=python_distutils --with python2,python3
+
+override_dh_clean:
+	dh_clean
+	rm -rf build
+
+override_dh_auto_install:
+	dh_auto_install
+
+	set -e && for pyvers in $(PYVERS); do \
+		python$$pyvers setup.py install --install-layout=deb \
+			--root $(CURDIR)/debian/python-mimeparse; \
+	done
+
+	set -e && for pyvers in $(PY3VERS); do \
+		python$$pyvers setup.py install --install-layout=deb \
+			--root $(CURDIR)/debian/python3-mimeparse; \
+	done
+
 
 get-orig-source:
 	uscan --noconf --force-download --download-current-version --destdir=${CURDIR}
@@ -12,5 +31,5 @@ test-python%:
 	python$* mimeparse_test.py
 
 ifeq (,$(findstring nocheck,$(DEB_BUILD_OPTIONS)))
-override_dh_auto_test: ${PYVERS:%=test-python%}
+override_dh_auto_test: ${PYVERS:%=test-python%} ${PY3VERS:%=test-python%}
 endif
