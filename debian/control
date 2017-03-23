@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 8), python-all (>= 2.6.6-3~)
 Homepage: https://code.google.com/p/mimeparse/
 Vcs-Browser: http://git.fsinf.at/apt/restauth/trees/master/python-mimeparse-0.1.3
 Vcs-Git: http://git.fsinf.at/apt/restauth.git
-XS-Pexip-Upstream: http://archive.ubuntu.com/ubuntu/ precise
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
 
 Package: python-mimeparse
 Architecture: all
