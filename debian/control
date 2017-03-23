@@ -2,21 +2,36 @@ Source: python-mimeparse
 Section: python
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
-XSBC-Pexip-Original-Maintainer: Mathias Ertl <apt-repository@fsinf.at>
-Standards-Version: 3.9.2
-Build-Depends: debhelper (>= 8), python-all (>= 2.6.6-3~)
-Homepage: https://code.google.com/p/mimeparse/
-Vcs-Browser: http://git.fsinf.at/apt/restauth/trees/master/python-mimeparse-0.1.3
-Vcs-Git: http://git.fsinf.at/apt/restauth.git
+XSBC-Pexip-Original-Maintainer: Mathias Ertl <mati@restauth.net>
+Standards-Version: 3.9.4
+Build-Depends: debhelper (>= 8), python-all (>= 2.6.6-3~), python3-all,
+ python-setuptools, python3-setuptools
+XS-Python-Version: >= 2.6
+Homepage: https://pypi.python.org/pypi/python-mimeparse
+Vcs-Browser: https://git.fsinf.at/apt/python-mimeparse
+Vcs-Git: https://git.fsinf.at/apt/python-mimeparse.git
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
 
 Package: python-mimeparse
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}
-Description: Parse mime-types and quality parameters
+Description: Parse mime-types and quality parameters - python 2.x
  This module provides basic functions for parsing mime-type names and
  matching them against a list of media-ranges.
  .
  See section 14.1 of RFC 2616 (the HTTP specification)
  for a complete explanation.
+ .
+ This package contains the Python 2.x module.
 
+Package: python3-mimeparse
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Parse mime-types and quality parameters - python 3.x
+ This module provides basic functions for parsing mime-type names and
+ matching them against a list of media-ranges.
+ .
+ See section 14.1 of RFC 2616 (the HTTP specification)
+ for a complete explanation.
+ .
+ This package contains the Python 3.x module.
