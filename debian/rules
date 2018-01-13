@@ -24,9 +24,6 @@ override_dh_auto_install:
 	done
 
 
-get-orig-source:
-	uscan --noconf --force-download --download-current-version --destdir=${CURDIR}
-
 test-python%:
 	python$* mimeparse_test.py
 
