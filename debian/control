@@ -24,7 +24,7 @@ Description: Parse mime-types and quality parameters - python 2.x
 
 Package: python3-mimeparse
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}
+Depends: ${misc:Depends}, ${python3:Depends}
 Description: Parse mime-types and quality parameters - python 3.x
  This module provides basic functions for parsing mime-type names and
  matching them against a list of media-ranges.

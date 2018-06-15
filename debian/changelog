@@ -1,3 +1,14 @@
+python-mimeparse (0.1.4-1+deb8u1) jessie; urgency=medium
+
+  [ Andreas Beckmann ]
+  * Non-maintainer upload.
+  * Backport the fix from 0.1.4-3.1 to jessie.
+
+  [ Adrian Bunk ]
+  * Fix the python3-mimeparse dependencies. (Closes: #867439)
+
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 15 Jun 2018 15:42:27 +0200
+
 python-mimeparse (0.1.4-1) unstable; urgency=low
 
   * New upstream release.
