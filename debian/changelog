@@ -1,3 +1,20 @@
+python-mimeparse (0.1.4-1+deb8u1pexip1) pexip; urgency=low
+
+  * New upstream release
+
+ -- John-Mark Bell <jmb@pexip.com>  Thu, 05 Jul 2018 10:00:14 +0100
+
+python-mimeparse (0.1.4-1+deb8u1) jessie; urgency=medium
+
+  [ Andreas Beckmann ]
+  * Non-maintainer upload.
+  * Backport the fix from 0.1.4-3.1 to jessie.
+
+  [ Adrian Bunk ]
+  * Fix the python3-mimeparse dependencies. (Closes: #867439)
+
+ -- Andreas Beckmann <anbe@debian.org>  Fri, 15 Jun 2018 15:42:27 +0200
+
 python-mimeparse (0.1.4-1pexip1) pexip; urgency=low
 
   * Migrate to Jessie
