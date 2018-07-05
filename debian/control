@@ -10,7 +10,7 @@ XS-Python-Version: >= 2.6
 Homepage: https://pypi.python.org/pypi/python-mimeparse
 Vcs-Browser: https://git.fsinf.at/apt/python-mimeparse
 Vcs-Git: https://git.fsinf.at/apt/python-mimeparse.git
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ jessie
+XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: python-mimeparse
 Architecture: all
