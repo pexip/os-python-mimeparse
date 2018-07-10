@@ -3,13 +3,14 @@ Section: python
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Mathias Ertl <mati@restauth.net>
-Standards-Version: 3.9.4
+XSBC-Pexip-Original-Uploaders: Free Ekanayaka <freee@debian.org>
+Standards-Version: 3.9.8
 Build-Depends: debhelper (>= 8), python-all (>= 2.6.6-3~), python3-all,
  python-setuptools, python3-setuptools
 XS-Python-Version: >= 2.6
 Homepage: https://pypi.python.org/pypi/python-mimeparse
-Vcs-Browser: https://git.fsinf.at/apt/python-mimeparse
-Vcs-Git: https://git.fsinf.at/apt/python-mimeparse.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-mimeparse.git/
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-mimeparse.git
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ stretch
 
 Package: python-mimeparse
