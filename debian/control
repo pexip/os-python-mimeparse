@@ -3,30 +3,17 @@ Section: python
 Priority: optional
 Maintainer: Mathias Ertl <mati@restauth.net>
 Uploaders: Free Ekanayaka <freee@debian.org>
-Standards-Version: 3.9.8
-Build-Depends: debhelper (>= 8), python-all (>= 2.6.6-3~), python3-all,
- python-setuptools, python3-setuptools
-XS-Python-Version: >= 2.6
+Standards-Version: 4.4.0
+Build-Depends: debhelper-compat (= 12), python3-all,
+ python3-setuptools, dh-python, python3-pytest
 Homepage: https://pypi.python.org/pypi/python-mimeparse
-Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-mimeparse.git/
-Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-mimeparse.git
-
-Package: python-mimeparse
-Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}
-Description: Parse mime-types and quality parameters - python 2.x
- This module provides basic functions for parsing mime-type names and
- matching them against a list of media-ranges.
- .
- See section 14.1 of RFC 2616 (the HTTP specification)
- for a complete explanation.
- .
- This package contains the Python 2.x module.
+Vcs-Browser: https://salsa.debian.org/python-team/modules/python-mimeparse
+Vcs-Git: https://salsa.debian.org/python-team/modules/python-mimeparse.git
 
 Package: python3-mimeparse
 Architecture: all
 Depends: ${misc:Depends}, ${python3:Depends}
-Description: Parse mime-types and quality parameters - python 3.x
+Description: Parse mime-types and quality parameters - Python 3.x
  This module provides basic functions for parsing mime-type names and
  matching them against a list of media-ranges.
  .
