@@ -1,3 +1,9 @@
+python-mimeparse (0.1.4-3.1pexip1) pexip; urgency=medium
+
+  * Migrate to Buster
+
+ -- Vincent Sanders <vince@pexip.com>  Sun, 16 Feb 2020 23:38:51 +0000
+
 python-mimeparse (0.1.4-3.1~deb9u1pexip1) pexip; urgency=medium
 
   * Migrate to Stretch
