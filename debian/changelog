@@ -4,13 +4,6 @@ python-mimeparse (0.1.4-3.1~deb9u1pexip1) pexip; urgency=medium
 
  -- John-Mark Bell <jmb@pexip.com>  Tue, 10 Jul 2018 11:45:30 +0000
 
-python-mimeparse (0.1.4-3.1~deb9u1) stretch; urgency=medium
-
-  * Non-maintainer upload.
-  * Rebuild for stretch.
-
- -- Andreas Beckmann <anbe@debian.org>  Sun, 14 Jan 2018 00:37:15 +0100
-
 python-mimeparse (0.1.4-3.1) unstable; urgency=medium
 
   * Non-maintainer upload.
