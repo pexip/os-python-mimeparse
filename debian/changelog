@@ -1,3 +1,9 @@
+python-mimeparse (0.1.4-3.1pexip2) pexip; urgency=medium
+
+  * Rebuild in buster environment
+
+ -- Steve McIntyre <steve.mcintyre@pexip.com>  Thu, 16 Jul 2020 04:03:06 +0000
+
 python-mimeparse (0.1.4-3.1pexip1) pexip; urgency=medium
 
   * Migrate to Buster
