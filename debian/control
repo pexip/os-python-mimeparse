@@ -11,7 +11,7 @@ XS-Python-Version: >= 2.6
 Homepage: https://pypi.python.org/pypi/python-mimeparse
 Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/python-mimeparse.git/
 Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/python-mimeparse.git
-XS-Pexip-Upstream: http://ftp.debian.org/debian/ buster
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
 
 Package: python-mimeparse
 Architecture: all
