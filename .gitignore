@@ -1,0 +1,7 @@
+*.pyc
+.*.sw[po]
+.tox
+*.egg-info
+dist/
+build/
+.venv/

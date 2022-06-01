@@ -1,4 +1,4 @@
-Format: http://anonscm.debian.org/viewvc/dep/web/deps/dep5.mdwn?revision=173&view=markup
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: mimeparse
 Upstream-Contact: Joe Gregorio <joe@bitworking.org>
 Source: https://pypi.python.org/pypi/python-mimeparse
