@@ -10,7 +10,7 @@ Build-Depends: debhelper-compat (= 12), python3-all,
 Homepage: https://pypi.python.org/pypi/python-mimeparse
 Vcs-Browser: https://salsa.debian.org/python-team/modules/python-mimeparse
 Vcs-Git: https://salsa.debian.org/python-team/modules/python-mimeparse.git
-XS-Pexip-Upstream: http://deb.debian.org/debian/ bullseye
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: python3-mimeparse
 Architecture: all
