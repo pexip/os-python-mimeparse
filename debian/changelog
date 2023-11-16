@@ -1,3 +1,9 @@
+python-mimeparse (1.6.0-3pexip4) pexip-bookworm; urgency=medium
+
+  * Initial bookworm build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 16 Nov 2023 10:24:38 +0000
+
 python-mimeparse (1.6.0-3pexip3) pexip-bullseye; urgency=medium
 
   * Bullseye rebuild for ARM64 inclusion
