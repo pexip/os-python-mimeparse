@@ -1,3 +1,9 @@
+python-mimeparse (1.6.0-3+pexip24u6) pexip-bookworm; urgency=medium
+
+  * New versioning scheme
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Thu, 01 Feb 2024 16:23:40 +0000
+
 python-mimeparse (1.6.0-3pexip5) pexip-bookworm; urgency=medium
 
   * Bookworm build for product distribution
