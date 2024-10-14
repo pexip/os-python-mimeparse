@@ -1,14 +1,23 @@
 Source: python-mimeparse
 Section: python
 Priority: optional
-Maintainer: Mathias Ertl <mati@restauth.net>
-Uploaders: Free Ekanayaka <freee@debian.org>
-Standards-Version: 4.4.0
-Build-Depends: debhelper-compat (= 12), python3-all,
- python3-setuptools, dh-python, python3-pytest
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders:
+ Mathias Ertl <mati@restauth.net>,
+ Free Ekanayaka <freee@debian.org>,
+ Alexandre Detiste <tchet@debian.org>,
+Standards-Version: 4.6.2
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-python3,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-setuptools,
+ python3-pytest,
+Rules-Requires-Root: no
 Homepage: https://pypi.python.org/pypi/python-mimeparse
-Vcs-Browser: https://salsa.debian.org/python-team/modules/python-mimeparse
-Vcs-Git: https://salsa.debian.org/python-team/modules/python-mimeparse.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-mimeparse
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-mimeparse.git
 
 Package: python3-mimeparse
 Architecture: all
@@ -19,5 +28,3 @@ Description: Parse mime-types and quality parameters - Python 3.x
  .
  See section 14.1 of RFC 2616 (the HTTP specification)
  for a complete explanation.
- .
- This package contains the Python 3.x module.
