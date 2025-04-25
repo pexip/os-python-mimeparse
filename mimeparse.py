@@ -1,6 +1,4 @@
-import cgi
-
-__version__ = '1.6.0'
+__version__ = '2.0.0'
 __author__ = 'Joe Gregorio'
 __email__ = 'joe@bitworking.org'
 __license__ = 'MIT License'
@@ -9,6 +7,44 @@ __credits__ = ''
 
 class MimeTypeParseException(ValueError):
     pass
+
+
+# Vendored version of cgi._parseparam from Python 3.11 (deprecated and slated
+# for removal in 3.13)
+def _parseparam(s):
+    while s[:1] == ';':
+        s = s[1:]
+        end = s.find(';')
+        while end > 0 and (s.count('"', 0, end) - s.count('\\"', 0, end)) % 2:
+            end = s.find(';', end + 1)
+        if end < 0:
+            end = len(s)
+        f = s[:end]
+        yield f.strip()
+        s = s[end:]
+
+
+# Vendored version of cgi.parse_header from Python 3.11 (deprecated and slated
+# for removal in 3.13)
+def _parse_header(line):
+    """Parse a Content-type like header.
+
+    Return the main content-type and a dictionary of options.
+
+    """
+    parts = _parseparam(';' + line)
+    key = parts.__next__()
+    pdict = {}
+    for p in parts:
+        i = p.find('=')
+        if i >= 0:
+            name = p[:i].strip().lower()
+            value = p[i + 1:].strip()
+            if len(value) >= 2 and value[0] == value[-1] == '"':
+                value = value[1:-1]
+                value = value.replace('\\\\', '\\').replace('\\"', '"')
+            pdict[name] = value
+    return key, pdict
 
 
 def parse_mime_type(mime_type):
@@ -23,7 +59,7 @@ def parse_mime_type(mime_type):
 
     :rtype: (str,str,dict)
     """
-    full_type, params = cgi.parse_header(mime_type)
+    full_type, params = _parse_header(mime_type)
     # Java URLConnection class sends an Accept header that includes a
     # single '*'. Turn it into a legal wildcard.
     if full_type == '*':
@@ -32,7 +68,7 @@ def parse_mime_type(mime_type):
     type_parts = full_type.split('/') if '/' in full_type else None
     if not type_parts or len(type_parts) > 2:
         raise MimeTypeParseException(
-            "Can't parse type \"{}\"".format(full_type))
+            f"Can't parse type \"{full_type}\"")
 
     (type, subtype) = type_parts
 
@@ -85,14 +121,9 @@ def quality_and_fitness_parsed(mime_type, parsed_ranges):
     for (type, subtype, params) in parsed_ranges:
 
         # check if the type and the subtype match
-        type_match = (
-            type in (target_type, '*') or
-            target_type == '*'
-        )
-        subtype_match = (
-            subtype in (target_subtype, '*') or
-            target_subtype == '*'
-        )
+        type_match = type in (target_type, '*') or target_type == '*'
+
+        subtype_match = subtype in (target_subtype, '*') or target_subtype == '*'
 
         # if they do, assess the "fitness" of this mime_type
         if type_match and subtype_match:

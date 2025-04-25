@@ -1,0 +1,57 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools>=47",
+  "wheel>=0.34",
+]
+
+[project]
+name = "python-mimeparse"
+readme = "README.rst"
+dynamic = ["version"]
+dependencies = []
+requires-python = ">=3.8"
+description = "A module provides basic functions for parsing mime-type names and matching them against a list of media-ranges."
+license = {text = "MIT"}
+authors = [
+  {name = "Joe Gregorio", email = "joe@bitworking.org"},
+  {name = "DB Tsai", email = "dbtsai@dbtsai.com"},
+]
+maintainers = [
+  {name = "Falconry team", email = "mail@kgriffs.com"},
+]
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Development Status :: 6 - Mature",
+  "Intended Audience :: Developers",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["mime-type", "media-type"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/falconry/python-mimeparse"
+"Issue Tracker" = "https://github.com/falconry/python-mimeparse/issues"
+Funding = "https://opencollective.com/falcon"
+Chat = "https://gitter.im/falconry/user"
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+py-modules = ["mimeparse"]
+
+[tool.setuptools.dynamic]
+version = {attr = "mimeparse.__version__"}
