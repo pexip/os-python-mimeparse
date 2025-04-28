@@ -1,3 +1,26 @@
+python-mimeparse (2.0.0-1) unstable; urgency=medium
+
+  * New upstream version 2.0.0 (Closes: #1082232, #1084652)
+  * Adopt package inside DPT (Closes: #942482)
+  * Use dh-sequence-python3
+  * Set Rules-Requires-Root: no
+  * Add dep on pybuild-plugin-pyproject
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+  * Bump debhelper from old 12 to 13.
+  * Set upstream metadata fields: Repository-Browse.
+  * Update standards version to 4.6.2, no changes needed.
+
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 14 Oct 2024 14:37:04 +0200
+
 python-mimeparse (1.6.0-3+pexip24u6) pexip-bookworm; urgency=medium
 
   * New versioning scheme
