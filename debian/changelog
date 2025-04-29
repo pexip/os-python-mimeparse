@@ -1,3 +1,9 @@
+python-mimeparse (2.0.0-1+pexip25u1) pexip-trixie; urgency=medium
+
+  * Initial trixie build
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Tue, 29 Apr 2025 22:54:46 +0100
+
 python-mimeparse (2.0.0-1) unstable; urgency=medium
 
   * New upstream version 2.0.0 (Closes: #1082232, #1084652)
