@@ -7,23 +7,26 @@ XSBC-Pexip-Original-Uploaders:
  Mathias Ertl <mati@restauth.net>,
  Free Ekanayaka <freee@debian.org>,
  Alexandre Detiste <tchet@debian.org>,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.2
 Build-Depends:
  debhelper-compat (= 13),
  dh-sequence-python3,
  pybuild-plugin-pyproject,
  python3-all,
- python3-setuptools,
  python3-pytest,
+ python3-setuptools,
 Rules-Requires-Root: no
 Homepage: https://pypi.python.org/pypi/python-mimeparse
 Vcs-Browser: https://salsa.debian.org/python-team/packages/python-mimeparse
 Vcs-Git: https://salsa.debian.org/python-team/packages/python-mimeparse.git
+X-Style: black
 XS-Pexip-Upstream: http://deb.debian.org/debian/ trixie
 
 Package: python3-mimeparse
 Architecture: all
-Depends: ${misc:Depends}, ${python3:Depends}
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
 Description: Parse mime-types and quality parameters - Python 3.x
  This module provides basic functions for parsing mime-type names and
  matching them against a list of media-ranges.

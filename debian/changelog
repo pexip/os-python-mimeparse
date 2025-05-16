@@ -1,3 +1,9 @@
+python-mimeparse (2.0.0-2) unstable; urgency=medium
+
+  * Fix debian/watch
+
+ -- Alexandre Detiste <tchet@debian.org>  Sat, 03 May 2025 00:58:07 +0200
+
 python-mimeparse (2.0.0-1+pexip25u1) pexip-trixie; urgency=medium
 
   * Initial trixie build
