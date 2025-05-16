@@ -1,3 +1,9 @@
+python-mimeparse (2.0.0-2+pexip25u1) pexip-trixie; urgency=medium
+
+  * New upstream release
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Fri, 16 May 2025 10:48:55 +0100
+
 python-mimeparse (2.0.0-2) unstable; urgency=medium
 
   * Fix debian/watch
